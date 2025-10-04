@@ -50,6 +50,22 @@
 1. Terraform сконфигурирован и создание инфраструктуры посредством Terraform возможно без дополнительных ручных действий, стейт основной конфигурации сохраняется в бакете или Terraform Cloud
 2. Полученная конфигурация инфраструктуры является предварительной, поэтому в ходе дальнейшего выполнения задания возможны изменения.
 
+1. Сделал две конфигурации терраформа terraform-main и terraform-prereq-bucket и отдельный сервисный аккаунт
+2. В гитигнор добавлены tfvars и key
+
+
+<img src = "img/Screenshot_sa.jpg" width = 100%>
+
+<img src = "img/Screenshot_bucket.jpg" width = 100%>
+
+<img src = "img/Screenshot_terraform_main.jpg" width = 100%>
+
+3. Запуск и дестрой terraform-main
+
+<img src = "img/Screenshot_terraform_main2.jpg" width = 100%>
+
+<img src = "img/Screenshot_terraform_destroy.jpg" width = 100%>
+
 ---
 ### Создание Kubernetes кластера
 
@@ -71,6 +87,10 @@
 2. В файле `~/.kube/config` находятся данные для доступа к кластеру.
 3. Команда `kubectl get pods --all-namespaces` отрабатывает без ошибок.
 
+1. Использовал kuberspay
+
+<img src = "img/kuber/Screenshot_1.jpg" width = 100%>
+
 ---
 ### Создание тестового приложения
 
@@ -88,6 +108,20 @@
 
 1. Git репозиторий с тестовым приложением и Dockerfile.
 2. Регистри с собранным docker image. В качестве регистри может быть DockerHub или [Yandex Container Registry](https://cloud.yandex.ru/services/container-registry), созданный также с помощью terraform.
+
+1. https://github.com/Semergal/nginx-test-app
+
+2. https://hub.docker.com/repository/docker/semergal/nginx-test-app/general
+
+
+<img src = "img/test_app/Screenshot_1.jpg" width = 100%>
+
+<img src = "img/test_app/Screenshot_2.jpg" width = 100%>
+
+<img src = "img/test_app/Screenshot_3.jpg" width = 100%>
+
+<img src = "img/test_app/Screenshot_4.jpg" width = 100%>
+
 
 ---
 ### Подготовка cистемы мониторинга и деплой приложения
@@ -112,6 +146,22 @@
 3. Дашборды в grafana отображающие состояние Kubernetes кластера.
 4. Http доступ на 80 порту к тестовому приложению.
 5. Atlantis или terraform cloud или ci/cd-terraform
+
+1. Для деплоя prometheus выбрал helm chart
+
+<img src = "img/prometheus/Screenshot_1.jpg" width = 100%>
+
+<img src = "img/prometheus/Screenshot_2.jpg" width = 100%>
+
+<img src = "img/prometheus/Screenshot_3.jpg" width = 100%>
+
+<img src = "img/prometheus/Screenshot_4.jpg" width = 100%>
+
+<img src = "img/prometheus/Screenshot_5.jpg" width = 100%>
+
+<img src = "img/prometheus/Screenshot_6.jpg" width = 100%>
+
+
 ---
 ### Установка и настройка CI/CD
 
@@ -141,3 +191,13 @@
 6. Ссылка на тестовое приложение и веб интерфейс Grafana с данными доступа.
 7. Все репозитории рекомендуется хранить на одном ресурсе (github, gitlab)
 
+1. Добабавил файл ci-cd.yaml в репозиторий с тестовым приложением в каталог .github/workflows  https://github.com/Semergal/nginx-test-app
+
+
+<img src = "img/cicd/Screenshot_1.jpg" width = 100%>
+
+<img src = "img/picd/Screenshot_2.jpg" width = 100%>
+
+<img src = "img/cicd/Screenshot_3.jpg" width = 100%>
+
+<img src = "img/cicd/Screenshot_4.jpg" width = 100%>
