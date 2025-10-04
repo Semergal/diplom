@@ -206,7 +206,7 @@
 
 <img src = "img/cicd/Screenshot_1.jpg" width = 100%>
 
-<img src = "img/picd/Screenshot_2.jpg" width = 100%>
+<img src = "img/cicd/Screenshot_2.jpg" width = 100%>
 
 <img src = "img/cicd/Screenshot_3.jpg" width = 100%>
 
