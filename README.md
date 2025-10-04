@@ -50,6 +50,8 @@
 1. Terraform сконфигурирован и создание инфраструктуры посредством Terraform возможно без дополнительных ручных действий, стейт основной конфигурации сохраняется в бакете или Terraform Cloud
 2. Полученная конфигурация инфраструктуры является предварительной, поэтому в ходе дальнейшего выполнения задания возможны изменения.
 
+Решение:
+
 1. Сделал две конфигурации терраформа terraform-main и terraform-prereq-bucket и отдельный сервисный аккаунт
 2. В гитигнор добавлены tfvars и key
 
@@ -87,6 +89,8 @@
 2. В файле `~/.kube/config` находятся данные для доступа к кластеру.
 3. Команда `kubectl get pods --all-namespaces` отрабатывает без ошибок.
 
+Решение:
+
 1. Использовал kuberspay
 
 <img src = "img/kuber/Screenshot_1.jpg" width = 100%>
@@ -108,6 +112,8 @@
 
 1. Git репозиторий с тестовым приложением и Dockerfile.
 2. Регистри с собранным docker image. В качестве регистри может быть DockerHub или [Yandex Container Registry](https://cloud.yandex.ru/services/container-registry), созданный также с помощью terraform.
+
+Решение:
 
 1. https://github.com/Semergal/nginx-test-app
 
@@ -146,6 +152,8 @@
 3. Дашборды в grafana отображающие состояние Kubernetes кластера.
 4. Http доступ на 80 порту к тестовому приложению.
 5. Atlantis или terraform cloud или ci/cd-terraform
+
+Решение:
 
 1. Для деплоя prometheus выбрал helm chart
 
@@ -190,6 +198,8 @@
 5. Репозиторий с конфигурацией Kubernetes кластера.
 6. Ссылка на тестовое приложение и веб интерфейс Grafana с данными доступа.
 7. Все репозитории рекомендуется хранить на одном ресурсе (github, gitlab)
+
+Решение:
 
 1. Добабавил файл ci-cd.yaml в репозиторий с тестовым приложением в каталог .github/workflows  https://github.com/Semergal/nginx-test-app
 
